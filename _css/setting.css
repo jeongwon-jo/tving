@@ -1,0 +1,206 @@
+@charset "UTF-8";
+:root {
+  /* color */
+  --color-black: #1a1a1a;
+  --color-main: #FF143D;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.btn-mini {
+  height: 32px;
+  line-height: 32px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.btn-sm {
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.btn-md {
+  height: 44px;
+  line-height: 44px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.btn-lg {
+  height: 52px;
+  line-height: 52px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.btn-big {
+  height: 56px;
+  line-height: 56px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.btn-w100p {
+  width: 100%;
+}
+
+.btn-textType {
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--info_text);
+}
+
+.btn_p16 {
+  padding: 0 16px;
+}
+
+.btn.disabled {
+  background-color: var(--bg_light);
+  color: var(--disabled);
+  border: 1px solid var(--line_color);
+}
+
+.btn:disabled {
+  background-color: var(--bg_light) !important;
+  color: var(--disabled) !important;
+  border: 1px solid var(--line_color) !important;
+}
+
+/* #### Modal #### */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: -webkit-fill-available;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+  opacity: 0;
+}
+
+.modal.open {
+  z-index: 1000;
+  opacity: 1;
+}
+
+.modal__inner {
+  position: absolute;
+  top: 47.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 8px;
+  background-color: var(--white);
+  transition: 0.45s;
+  opacity: 0;
+}
+
+.modal.open .modal__inner {
+  top: 50%;
+  opacity: 1;
+}
+
+.modal__inner::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.modal__inner::-webkit-scrollbar-thumb {
+  height: 30%;
+  background: #dddddd;
+  border-radius: 10px;
+}
+
+.modal__inner::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 20px;
+}
+
+/* Form */
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=email],
+input[type=tel] {
+  border: 1px solid #E2E2E2;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 0 16px;
+  font-size: 16px;
+}
+
+input[type=text]::placeholder,
+input[type=password]::placeholder,
+input[type=number]::placeholder,
+input[type=email]::placeholder,
+input[type=tel]::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #999999;
+}
+
+/* Select */
+.select-primary {
+  height: 46px;
+  line-height: 46px;
+  float: none;
+  width: 200px;
+  display: inline-block;
+}
+
+.select-primary .list {
+  width: inherit;
+  max-height: 190px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.select-primary:active,
+.select-primary.open,
+.select-primary:focus {
+  border-color: #ddd;
+}
+
+.select-primary .option {
+  border-bottom: 1px solid #ddd;
+  height: 40px;
+  line-height: 40px;
+}
+
+.select-primary .option:last-child {
+  border-bottom: none;
+}
+
+.select-primary .option.selected {
+  font-weight: normal;
+}
+
+.select-primary:after {
+  border-bottom: none;
+  border-right: none;
+  display: inline-block;
+  width: 14px;
+  height: 8px;
+  background: url(/_img/common/icon_arrow_bottom.svg) no-repeat center center / contain;
+  transform: translateY(-50%) rotate(0deg);
+  margin-top: 0;
+  right: 15px;
+}
+
+.select-primary.open:after {
+  transform: translateY(-50%) rotate(-180deg);
+  transform-origin: center !important;
+}

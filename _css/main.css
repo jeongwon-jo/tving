@@ -1,0 +1,248 @@
+@charset "UTF-8";
+.home {
+  width: 100%;
+  height: 100%;
+}
+
+.home section {
+  width: 100%;
+}
+
+.home .sec__inner {
+  padding: 0 20px;
+  width: 100%;
+  max-width: 1840px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+/* section1 */
+section.home_sec1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100dvh;
+  position: relative;
+  overflow: hidden;
+}
+
+section.home_sec1 .sec__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 40px;
+}
+
+.scroll_bottom {
+  text-align: center;
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll_bottom span {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  padding-right: 40px;
+}
+
+.scroll_bottom span::after {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url(../_img/icon/icon_scroll_down.svg) no-repeat center center/ contain;
+}
+
+.tving_title {
+  display: flex;
+  justify-content: flex-start;
+  opacity: 1;
+  width: 100%;
+  height: auto;
+}
+
+.tving_title h1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 45px;
+  font-size: 130px;
+  font-weight: 700;
+}
+
+.tving_title img {
+  opacity: 0;
+  width: 400px;
+  transition: 0.5s;
+  transform: translateY(50px);
+}
+
+section.home_sec1.active .tving_title img {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+section.home_sec1 .video_wrap {
+  width: 100%;
+  height: calc(100% - 340px);
+  max-height: 1000px;
+  position: relative;
+}
+
+section.home_sec1 .video_wrap h2.program_tit {
+  opacity: 0;
+  font-size: 132px;
+  font-weight: 700;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+section.home_sec1 .video {
+  width: 100%;
+  height: 100%;
+  border-radius: 32px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section.home_sec1 .video_wrap .video::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 1.2s;
+  background-color: var(--color-black);
+}
+
+section.home_sec1.active .video_wrap .video::after {
+  width: 0px;
+}
+
+section.home_sec1 .video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video_section {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  z-index: 100;
+}
+
+.video_section h2.program_tit {
+  font-size: 132px;
+  font-weight: 700;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.video_section .bg_video {
+  width: 100%;
+  height: 100%;
+}
+
+.video_section .bg_video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* section2 */
+section.home_sec2 {
+  position: relative;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.onair_title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.onair_title h1 {
+  font-size: 180px;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.onair_posters {
+  width: 100%;
+  display: flex;
+  gap: 24px;
+  padding: 36px;
+  height: 200vh;
+  overflow: hidden;
+}
+
+.onair_posters .posters {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.onair_posters .posters:nth-child(1) {
+  transform: translateY(-200vh);
+}
+
+.onair_posters .posters:nth-child(2) {
+  transform: translateY(-0vh);
+}
+
+.onair_posters .posters:nth-child(3) {
+  transform: translateY(-200vh);
+}
+
+.onair_posters .posters .poster {
+  width: 100%;
+  height: 80vh;
+  flex-shrink: 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.onair_posters .posters .poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Pad & Mobile */
+@media screen and (max-width:1200px) {}
+/* Pad */
+@media screen and (min-width: 768px) and (max-width:1200px) {}
+/* Mobile */
+@media screen and (max-width:768px) {}
