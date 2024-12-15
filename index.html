@@ -183,8 +183,61 @@
             </div>
           </div>
         </section>
-        <section>
-          
+        <section class="home_sec3">
+          <div class="new_clips_title">
+            <h1>NEW CLIPS</h1>
+            <button type="button" class="btn_subscribe">
+              <span>TVING 공식 유튜브<br>구독하기</span>
+            </button>
+          </div>
+          <div class="new_clips_swiper">
+            <div class="swiper clipSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" class="clip_link">
+                    <img src="./_img/clips_img_01.webp" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="clip_link">
+                    <img src="./_img/clips_img_02.webp" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="clip_link">
+                    <img src="./_img/clips_img_03.webp" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="clip_link">
+                    <img src="./_img/clips_img_04.webp" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="clip_link">
+                    <img src="./_img/clips_img_05.webp" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="clip_link">
+                    <img src="./_img/clips_img_06.webp" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="clip_link">
+                    <img src="./_img/clips_img_07.webp" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="clip_link">
+                    <img src="./_img/clips_img_08.webp" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
         </section>
       </div>
     </main>
@@ -275,6 +328,22 @@
     timeline2.to($('.onair_posters .posters:nth-child(1)'), { transform: "translateY(-50vh)", duration: 5 }, '<')
     timeline2.to($('.onair_posters .posters:nth-child(2)'), { transform: "translateY(-200vh)", duration: 5 }, '<')
     timeline2.to($('.onair_posters .posters:nth-child(3)'), { transform: "translateY(-50vh)", duration: 5 }, '<')
+
+    var swiper = new Swiper(".clipSwiper", {
+      slidesPerView: 3.2,
+      spaceBetween: 30,
+      centeredSlides: true,
+      slideToClickedSlide: true,
+      effect: 'coverflow',
+      coverflowEffect: {
+        rotate: 30,
+        slideShadows: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
   </script>
 </body>
 
